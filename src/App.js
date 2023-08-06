@@ -1,6 +1,9 @@
-import './App.css';
+import { useReducer } from 'react';
 
+import './App.css';
 import MainContainer from "./components/containers/mainContainer/MainContainer";
+
+
 
 function App() {
   return (
