@@ -1,7 +1,11 @@
-const taskContainer = () => {
+const taskContainer = (list) => {
     return (
         <div>
-            <Task />
+            {list.map((item) => {
+                return (
+                    
+                );
+            }
         </div>
     );
 }
