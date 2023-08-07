@@ -10,6 +10,7 @@ const DailyTask = (item) => {
         let new_points = parseInt(event.target.value);
         if (max_points >= new_points) {
             setPoints(new_points);
+            //TODO: send new_points to backend
         };
     };
 
@@ -17,7 +18,7 @@ const DailyTask = (item) => {
         <div>
             <div className="task">
                 <div className="task_name">
-                    <h3>{item.name}</h3>
+                    <h3>{name}</h3>
                 </div>
                 <input type="text" className="task_points" value={points} onChange={handleChange} />
             </div>
