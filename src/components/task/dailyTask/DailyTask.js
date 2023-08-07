@@ -3,11 +3,21 @@ import { useState } from "react";
 const DailyTask = (item) => {
 
     const name = item.name;
-    const max_points = parseInt(item.max_points);
-    const [points, setPoints] = useState(ParseInt(item.points));
+    const is_done = item.is_done;
+    const max_points = item.max_points;
+    const task_id = item.task_id;
+    const [points, setPoints] = useState(item.points);
+
+    const classNameConverter = (val) => {
+        return val ? 'task-done' : 'task-is-in-progress';
+    };
 
     const handleChange = (event) => {
+        console.log(event.target.value);
         let new_points = parseInt(event.target.value);
+        if (event.target.value === '') {
+            setPoints(0);
+        };
         if (max_points >= new_points) {
             setPoints(new_points);
             //TODO: send new_points to backend
@@ -15,10 +25,10 @@ const DailyTask = (item) => {
     };
 
     return (
-        <div>
+        <div key={task_id}>
             <div className="task">
                 <div className="task_name">
-                    <h3>{name}</h3>
+                    <h3 className={classNameConverter(is_done)} >{name}</h3>
                 </div>
                 <input type="text" className="task_points" value={points} onChange={handleChange} />
             </div>
@@ -26,5 +36,6 @@ const DailyTask = (item) => {
     );
 
 };
+
 
 export default DailyTask;
