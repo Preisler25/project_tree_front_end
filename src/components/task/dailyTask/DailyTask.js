@@ -26,3 +26,5 @@ const DailyTask = (item) => {
     );
 
 };
+
+export default DailyTask;
