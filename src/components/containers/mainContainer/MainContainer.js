@@ -28,19 +28,23 @@ const MainContainer = () => {
             <div className="main-cont-color-effect">
                 <div className="navbar">
                     <div className="data-selector">
-                        <input type="radio" name='data-s-input' defaultChecked/>
-                        <input type="radio" name='data-s-input'/>
-                        <input type="radio" name='data-s-input'/>
+                        <input type="radio" name='data-s-input' defaultChecked />
+                        <input type="radio" name='data-s-input' />
+                        <input type="radio" name='data-s-input' />
                     </div>
                     <div className="day-selector">
-                        <input type="radio" name='day-s-input' defaultChecked/>
-                        <input type="radio" name='day-s-input'/>
-                        <input type="radio" name='day-s-input'/>
+                        <input type="radio" name='day-s-input' defaultChecked />
+                        <input type="radio" name='day-s-input' />
+                        <input type="radio" name='day-s-input' />
                     </div>
                 </div>
                 <div className="main-body">
                     <div className="task-cont">
                         <h1>Tasks</h1>
+                        <div className="task-item-const">
+                            <h3>TaskName</h3>
+                            <input type="text" />
+                        </div>
                     </div>
                     <div className="teams-cont">
                         <div className="team-cont">

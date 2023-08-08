@@ -1,7 +1,7 @@
-const TaskHeaderContainer = () => {
+const TaskHeaderContainer = (value) => {
     return (
         <div>
-            <h1>TaskHeaderContainer</h1>
+            <h1>value</h1>
         </div>
     );
 }
