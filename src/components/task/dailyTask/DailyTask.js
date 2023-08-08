@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './DailyTask.css'
 
 const DailyTask = (item) => {
 
@@ -25,13 +26,11 @@ const DailyTask = (item) => {
     };
 
     return (
-        <div key={task_id}>
-            <div className="task">
-                <div className="task_name">
-                    <h3 className={classNameConverter(is_done)} >{name}</h3>
-                </div>
-                <input type="text" className="task_points" value={points} onChange={handleChange} />
+        <div className="task">
+            <div className="task_name">
+                <h3 className={classNameConverter(is_done)} >{name}</h3>
             </div>
+            <input type="text" className="task_points" value={points} onChange={handleChange} />
         </div>
     );
 

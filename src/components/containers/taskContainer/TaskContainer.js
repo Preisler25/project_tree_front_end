@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"; // Import useEffect
 
 import DailyTask from '../../task/dailyTask/DailyTask'
+import './TaskContainer.css'
 
 const TaskContainer = (team_id, day) => {
     const [is_loading, setIsLoading] = useState(true);
@@ -34,7 +35,7 @@ const TaskContainer = (team_id, day) => {
     }
 
     return (
-        <div>
+        <div className="day-cont">
             {list.map((item) => (
                 <DailyTask key={item.task_id} {...item} />
             ))}
