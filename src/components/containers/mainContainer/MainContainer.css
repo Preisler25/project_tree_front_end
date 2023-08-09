@@ -13,3 +13,38 @@
     opacity: 1;
     border-radius: 3vh;
 }
+
+.data-selector{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.data-selector-cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    margin-top: 2vh;
+    margin-right: 2vh;
+}
+.s-label{
+    border-bottom: 2px solid #83d8ffd7;
+}
+
+.selector:hover ~ .s-label {
+    margin-top: -0.5vh;
+    padding-bottom: 0.5vh;
+    border-bottom: 2px solid #000000d7;
+}
+
+.selector:checked ~ .s-label {
+    color: red;
+  }
+  
+.selector{
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    display: none;
+}
