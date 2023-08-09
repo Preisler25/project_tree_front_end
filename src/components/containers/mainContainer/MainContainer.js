@@ -28,14 +28,22 @@ const MainContainer = () => {
             <div className="main-cont-color-effect">
                 <div className="navbar">
                     <div className="data-selector">
-                        <input type="radio" name='data-s-input' defaultChecked />
-                        <input type="radio" name='data-s-input' />
-                        <input type="radio" name='data-s-input' />
+                        <label htmlFor="team-name-s">TeamName</label>
+                        <input id='team-name-s' className='data-selector selector' type="radio" name='data-s-input' defaultChecked />
+                        <label htmlFor="team-leader-s">TeamLeader</label>
+                        <input id='team-leader-s' className='data-selector selector' type="radio" name='data-s-input' />
+                        <label htmlFor="team-mentor-s">TeamMentor</label>
+                        <input id='team-mentor-s' className='data-selector selector' type="radio" name='data-s-input' />
+                        <label htmlFor="team-max-point-s">TeamMaxPoints</label>
+                        <input id='team-max-point-s' className='data-selector selector' type="radio" name='data-s-input' />
                     </div>
                     <div className="day-selector">
-                        <input type="radio" name='day-s-input' defaultChecked />
-                        <input type="radio" name='day-s-input' />
-                        <input type="radio" name='day-s-input' />
+                        <label htmlFor="day1">Day1</label>
+                        <input id='day1' className='day-selector selector' type="radio" name='day-s-input' defaultChecked />
+                        <label htmlFor="day2">Day2</label>
+                        <input id='day2' className='day-selector selector' type="radio" name='day-s-input' />
+                        <label htmlFor="day3">Day3</label>
+                        <input id='day3' className='day-selector selector' type="radio" name='day-s-input' />
                     </div>
                 </div>
                 <div className="main-body">
