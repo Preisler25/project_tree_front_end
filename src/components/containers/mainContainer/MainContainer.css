@@ -86,7 +86,7 @@
     width: 20vw;
     height: 80vh;
     border-radius: 2vh;
-    background-color: #3731319b;
+    background-color: #c2b1b145;
     margin-left: 3vw;
 }
 
@@ -110,9 +110,19 @@
     width: 20vw;
     height: 80vh;
     border-radius: 2vh;
-    background-color: #3731319b;
+    background-color: #c2b1b145;
 }
 
 .team-cont:not(:first-child) {
     margin-left: 2vh;
+}
+
+.day-cont,
+.task-item-const {
+    border: 1px solid #000000d7;
+    width: fill-available;
+}
+
+.cont-header-title {
+    padding: 2vh;
 }

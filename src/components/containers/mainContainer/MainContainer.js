@@ -6,7 +6,7 @@ const MainContainer = () => {
     const [is_loading, setIsLoading] = useState(true);
     const [teams, setTeams] = useState(null);
 
-    /*useEffect(() => {
+    useEffect(() => {
         const fetchTeams = async () => {
             setIsLoading(true);
             //const response = await fetch(`http://localhost:3000/api/teams/${team_id}/${day}`);
@@ -14,21 +14,28 @@ const MainContainer = () => {
             const data = [
                 { id: 0, name: 'TeamAlma', day: 0 },
                 { id: 1, name: 'TeamKorte', day: 1 },
-                { id: 2, name: 'TeamBarack', day: 2}
+                { id: 2, name: 'TeamBarack', day: 2 }
             ];
             setTimeout(() => {
                 setTeams(data); // Update state with fetched data
                 setIsLoading(false);
             }, 1000);
         };
-    }, [teams]);*/
+        fetchTeams();
+    }, []);
 
+    if (is_loading) {
+        return (
+            <div>
+                <h1>Loading...</h1>
+            </div>
+        );
+    }
     return (
         <div className="main-cont">
             <div className="main-cont-color-effect">
                 <div className="navbar">
                     <div className="data-selector">
-
                         <div className="data-selector-cont">
                             <input id='team-name-s' className='data-selector selector' type="radio" name='data-s-input' defaultChecked />
                             <label htmlFor="team-name-s" className='s-label'>TeamName</label>
@@ -71,7 +78,7 @@ const MainContainer = () => {
                 </div>
                 <div className="main-body">
                     <div className="task-cont">
-                        <h1>Tasks</h1>
+                        <h1 className='cont-header-title'>Tasks</h1>
                         <div className="task-item-const">
                             <h3>TaskName</h3>
                             <input type="text" />
@@ -79,11 +86,11 @@ const MainContainer = () => {
                     </div>
                     <div className="teams-cont">
                         <div className="team-cont">
-                            <h1>Team1</h1>
+                            <h1 className='cont-header-title'>Team1</h1>
                             <TaskContainer team_id={0} day={0} />
                         </div>
                         <div className="team-cont">
-                            <h1>Team2</h1>
+                            <h1 className='cont-header-title'>Team2</h1>
                             <TaskContainer team_id={1} day={1} />
                         </div>
                     </div>
