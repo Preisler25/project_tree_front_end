@@ -28,7 +28,7 @@ const MainContainer = () => {
             <div className="main-cont-color-effect">
                 <div className="navbar">
                     <div className="data-selector">
-                        
+
                         <div className="data-selector-cont">
                             <input id='team-name-s' className='data-selector selector' type="radio" name='data-s-input' defaultChecked />
                             <label htmlFor="team-name-s" className='s-label'>TeamName</label>
@@ -47,7 +47,7 @@ const MainContainer = () => {
                         <div className="data-selector-cont">
                             <input id='team-max-point-s' className='data-selector selector' type="radio" name='data-s-input' />
                             <label htmlFor="team-max-point-s" className='s-label'>TeamMaxPoints</label>
-                        </div>     
+                        </div>
 
                     </div>
                     <div className="day-selector">
