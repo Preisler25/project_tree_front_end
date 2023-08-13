@@ -79,17 +79,6 @@
     height: 90vh;
 }
 
-.task-cont {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 20vw;
-    height: 80vh;
-    border-radius: 2vh;
-    background-color: #c2b1b145;
-    margin-left: 3vw;
-}
-
 .teams-cont {
     display: flex;
     flex-direction: row;
@@ -98,9 +87,20 @@
     width: max-content;
     height: max-content;
     margin-left: 3vw;
-    background-color: #302b2b39;
+    background-color: #33303045;
     padding: 2vh;
     border-radius: 3vh;
+}
+
+.task-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20vw;
+    height: 80vh;
+    border-radius: 2vh;
+    background-color: #dadddee1;
+    margin-left: 3vw;
 }
 
 .team-cont {
