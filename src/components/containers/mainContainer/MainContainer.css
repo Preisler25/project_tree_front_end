@@ -119,10 +119,32 @@
 
 .day-cont,
 .task-item-const {
-    border: 1px solid #000000d7;
     width: fill-available;
 }
 
 .cont-header-title {
     padding: 2vh;
+}
+
+.task,
+.task-item-const {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh;
+    margin: 1vh;
+    border-radius: 2vh;
+    background-color: #302b2b39;
+}
+
+input[type="text"] {
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 3.5vh;
+    outline: none;
+    width: 20%;
+    border-bottom: 1px solid #ffffff;
 }
