@@ -9,6 +9,8 @@ const MainContainer = () => {
     useEffect(() => {
         const fetchTeams = async () => {
             setIsLoading(true);
+            //it would be better to restart! :D
+
             //const response = await fetch(`http://localhost:3000/api/teams/${team_id}/${day}`);
             //list = await response.json();
             const data = [
