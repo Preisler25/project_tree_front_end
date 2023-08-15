@@ -1,22 +1,22 @@
 import { RouterProvider } from 'react-router';
 import './App.css';
-import { createBrowserRouter } from '@curi/react-dom';
+import { createBrowserRouter } from 'react-router-dom';
 
 
 const router = createBrowserRouter(
   [
     {
       path: '/',
-      element: <App />,
+      element: <div>403</div>,
       errorElement: <div>404</div>,
       children: [
         {
           path: '/',
-          element: <MainContainer />,
+          element: <div>405</div>,
         },
         {
           path: '/:day',
-          element: <MainContainer />,
+          element: <div>406</div>,
         },
       ]
     }
