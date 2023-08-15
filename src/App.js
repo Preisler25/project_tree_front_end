@@ -13,7 +13,11 @@ const router = createBrowserRouter(
         {
           path: '/',
           element: <MainContainer />,
-        }
+        },
+        {
+          path: '/:day',
+          element: <MainContainer />,
+        },
       ]
     }
   ]
