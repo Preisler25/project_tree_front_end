@@ -1,13 +1,27 @@
+import { RouterProvider } from 'react-router';
 import './App.css';
-import MainContainer from "./components/containers/mainContainer/MainContainer";
+import { createBrowserRouter } from '@curi/react-dom';
 
 
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <App />,
+      errorElement: <div>404</div>,
+      children: [
+        {
+          path: '/',
+          element: <MainContainer />,
+        }
+      ]
+    }
+  ]
+);
 
 function App() {
   return (
-    <div className="App">
-      <MainContainer />
-    </div>
+    <RouterProvider router={router} />
   );
 }
 
