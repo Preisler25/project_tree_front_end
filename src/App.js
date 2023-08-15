@@ -1,21 +1,27 @@
 import { RouterProvider } from 'react-router';
-import './App.css';
 import { createBrowserRouter } from 'react-router-dom';
+
+//CSS import
+import './App.css';
+
+//Components import
+import Navbar from './components/navbar';
+
 
 
 const router = createBrowserRouter(
   [
     {
       path: '/',
-      element: <div>403</div>,
+      element: <Navbar days={['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']} />,
       errorElement: <div>404</div>,
       children: [
         {
-          path: '/',
+          path: '',
           element: <div>405</div>,
         },
         {
-          path: '/:day',
+          path: ':day',
           element: <div>406</div>,
         },
       ]
