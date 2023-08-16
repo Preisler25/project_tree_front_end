@@ -1,17 +1,18 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import { useState } from 'react';
 
-const Navbar = (params) => {
+
+import DayPicker from './navbar/dayPicker';
+import ViewPicker from './navbar/viewPicker';
+
+const Navbar = () => {
+
     return (
         <div className="main-body">
             <div className="navbar">
-                <div className="day-selector">
-                    {params.days.map((day, index) => {
-                        return (
-                            <NavLink key={index} className="data-selector-item" to={`:${day}`}>{day}</NavLink>
-                        );
-                    })
-                    }
-                </div>
+                <DayPicker days={days} setDays={setDays} />
+                <ViewPicker view={view} setView={setView} />
+
             </div>
             <Outlet />
         </div>
