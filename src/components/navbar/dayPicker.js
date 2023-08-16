@@ -1,14 +1,13 @@
-import { NavLink } from 'react-router-dom';
+import PickerItem from './pickerItem';
 
-const DayPicker = (days) => {
+const DayPicker = ({ day, setDay, all_days }) => {
     return (
         <div className="day-selector">
-            {days.map((day) => {
+            {all_days.map((item) => {
                 return (
-                    <NavLink key={day} className="data-selector-item" to={`:${day}`}>{day}</NavLink>
+                    <PickerItem key={item} item={item} active={day} onPress={setDay} type='day' />
                 );
-            })
-            }
+            })}
         </div>
     );
 }

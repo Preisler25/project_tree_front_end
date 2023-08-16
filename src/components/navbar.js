@@ -1,20 +1,13 @@
-import { Outlet } from 'react-router-dom';
-import { useState } from 'react';
-
-
 import DayPicker from './navbar/dayPicker';
 import ViewPicker from './navbar/viewPicker';
+import DataPicker from './navbar/dataPicker';
 
-const Navbar = () => {
-
+const Navbar = (params) => {
     return (
-        <div className="main-body">
-            <div className="navbar">
-                <DayPicker days={days} setDays={setDays} />
-                <ViewPicker view={view} setView={setView} />
-
-            </div>
-            <Outlet />
+        <div className="navbar">
+            <DayPicker day={params.day} setDay={params.setDay} all_days={params.all_days} />
+            <ViewPicker view={params.view} setView={params.setView} all_views={params.all_views} />
+            <DataPicker data={params.data} setData={params.setData} all_data={params.all_data} />
         </div>
     );
 }

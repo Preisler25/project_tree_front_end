@@ -5,14 +5,167 @@
   padding: 0;
 }
 
-/* Add a background color and a height to the App component */
 
-.App {
-  background: -webkit-linear-gradient(-90deg, #3a3e48, #212121d7);
-  background-color: #3a3e48;
+.main-cont {
+  background-color: #403D39;
   width: 100vw;
   height: 100vh;
+}
+
+.main-cont-color-effect {
+  background: -webkit-linear-gradient(90deg, #3a3e48, #83d8ffd7);
+  width: 100%;
+  height: 100%;
+  border-radius: 3vh;
+}
+
+.navbar {
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 2vh;
+}
+
+.data-selector {
+  display: flex;
+  flex-direction: row;
+}
+
+.data-selector-cont {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 2vh;
+  margin-left: 2vh;
+}
+
+.day-selector {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.day-selector-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  margin-top: 2vh;
+  margin-right: 2vh;
+}
+
+.view-selector {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.view-selector-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  margin-top: 2vh;
+  margin-right: 2vh;
+}
+
+.s-label {
+  border-bottom: 2px solid #83d8ffd7;
+}
+
+.selector:hover~.s-label {
+  margin-top: -0.5vh;
+  padding-bottom: 0.5vh;
+  border-bottom: 2px solid #000000d7;
+}
+
+.selector:checked~.s-label {
+  color: red;
+}
+
+.selector {
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.main-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 96vw;
+  height: 90vh;
+}
+
+.teams-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  height: max-content;
+  margin-left: 3vw;
+  background-color: #33303045;
+  padding: 2vh;
+  border-radius: 3vh;
+}
+
+.task-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20vw;
+  height: 80vh;
+  border-radius: 2vh;
+  background-color: #dadddee1;
+  margin-left: 3vw;
+}
+
+.team-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20vw;
+  height: 80vh;
+  border-radius: 2vh;
+  background-color: #c2b1b145;
+}
+
+.team-cont:not(:first-child) {
+  margin-left: 2vh;
+}
+
+.day-cont,
+.task-item-const {
+  width: fill-available;
+}
+
+.cont-header-title {
+  padding: 2vh;
+}
+
+.task,
+.task-item-const {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vh;
+  margin: 1vh;
+  border-radius: 2vh;
+  background-color: #302b2b39;
+}
+
+input[type="text"] {
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 3.5vh;
+  outline: none;
+  width: 20%;
+  border-bottom: 1px solid #ffffff;
 }
