@@ -5,24 +5,23 @@ import { createBrowserRouter } from 'react-router-dom';
 import './App.css';
 
 //Components import
-import Navbar from './components/navbar';
-
+import DailyPointPage from './pages/dailyPointPage';
 
 
 const router = createBrowserRouter(
   [
     {
       path: '/',
-      element: <Navbar days={['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']} />,
       errorElement: <div>404</div>,
       children: [
         {
           path: '',
-          element: <div>405</div>,
+          element: <div>LoginPage</div>,
         },
         {
-          path: ':day',
-          element: <div>406</div>,
+          //login required
+          path: 'home',
+          element: <DailyPointPage />,
         },
       ]
     }
