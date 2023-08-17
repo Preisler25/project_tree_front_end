@@ -1,8 +1,15 @@
+import TeamCard from '../components/cards/teamCard';
+
 const Body = (params) => {
+
     return (
-        <div>
-            <h1>Body</h1>
-            <h2>{params.day}</h2>
+        <div>//body content
+            <div></div> //tasks
+            <div>//teams
+                {params.teams.map((team) => (
+                    <TeamCard key={team.team_id} team={team} pointHandler={params.setTeams} />
+                ))}
+            </div>
         </div>
     );
 }

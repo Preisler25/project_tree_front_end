@@ -172,3 +172,7 @@ input[type="text"] {
   width: 20%;
   border-bottom: 1px solid #ffffff;
 }
+
+.team-card {
+  width: 20vw;
+}
