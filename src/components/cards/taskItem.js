@@ -26,7 +26,7 @@ const TaskItem = (item) => {
     };
 
     return (
-        <div className="task">
+        <div key={task_id} className="task">
             <div className="task_name">
                 <h3 className={classNameConverter(is_done)} >{name}</h3>
             </div>

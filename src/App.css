@@ -175,4 +175,17 @@ input[type="text"] {
 
 .team-card {
   width: 20vw;
+  height: 75vh;
+  border: 1px solid red;
+}
+
+.team-cont {
+  margin-top: 3vh;
+  margin-bottom: 4vh;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid blue;
+  height: 80vh;
+  width: 80vw;
+  justify-content: space-evenly;
 }
