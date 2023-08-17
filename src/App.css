@@ -72,17 +72,20 @@
 }
 
 .s-label {
-  border-bottom: 2px solid #83d8ffd7;
+  color: #FFFCF2;
+  border-bottom: 2px solid #FFFCF2;
+  transition: 0.1s;
 }
 
 .selector:hover~.s-label {
   margin-top: -0.5vh;
   padding-bottom: 0.5vh;
-  border-bottom: 2px solid #000000d7;
+  border-bottom: 2px solid #FFFCF2;
 }
 
 .selector:checked~.s-label {
-  color: red;
+  color: #E47C1D;
+  border-color: #E47C1D;
 }
 
 .selector {
