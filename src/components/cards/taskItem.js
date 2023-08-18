@@ -1,13 +1,11 @@
-import { useState } from 'react';
+const TaskItem = ({ task, teamHandler }) => {
 
-const TaskItem = (item) => {
-
-    const name = item.name;
-    const is_done = item.is_done;
-    const max_points = item.max_points;
-    const task_id = item.task_id;
-    const points = item.points;
-    const setPoints = item.setPoints;
+    const name = task.name;
+    const is_done = task.is_done;
+    const max_points = task.max_points;
+    const task_id = task.task_id;
+    const points = task.points;
+    const setPoints = teamHandler;
 
     const classNameConverter = (val) => {
         return val ? 'task-done' : 'task-is-in-progress';

@@ -7,7 +7,7 @@ const Body = (params) => {
             <div>{/* tasks */}</div>
             <div className='team-cont'>
                 {params.teams.map((team) => (
-                    <TeamCard key={team.team_id} team={team} pointHandler={params.setTeams} />
+                    <TeamCard key={team.team_id} team={team} teamHandler={params.setTeams} />
                 ))}
             </div>
         </div>

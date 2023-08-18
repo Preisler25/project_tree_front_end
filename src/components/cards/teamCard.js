@@ -1,7 +1,7 @@
 import Line from "../elements/line";
 import TaskItem from "./taskItem";
 
-const TeamCard = ({ team }) => {
+const TeamCard = ({ team, teamHandler }) => {
     console.log(team);
     return (
         <div className="team-card" key={team.team_id}> {/* Move key here */}
@@ -10,7 +10,7 @@ const TeamCard = ({ team }) => {
                 <div className="team-card-rank">{team.rank}</div>
                 <Line />
                 {team.tasks.map((task) => (
-                    <TaskItem key={task.task_id} task={task} />
+                    <TaskItem key={task.task_id} task={task} teamHandler={teamHandler} />
                 ))}
             </div>
         </div>
