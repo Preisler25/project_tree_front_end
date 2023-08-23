@@ -5,7 +5,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import './App.css';
 
 //Components import
-import DailyPointPage from './pages/dailyPointPage';
+import DailyPointPage from './Pages/dailyPointPage';
 
 
 const router = createBrowserRouter(
