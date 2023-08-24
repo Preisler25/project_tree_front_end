@@ -15,5 +15,4 @@ const TeamCard = ({ team }) => {
         </div>
     );
 }
-
 export default TeamCard;
