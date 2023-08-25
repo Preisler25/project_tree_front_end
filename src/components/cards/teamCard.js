@@ -3,14 +3,14 @@ import TaskItem from "./taskItem";
 
 const TeamCard = ({ team }) => {
     return (
-        <div className="team-card" key={team.team_id}> {/* Move key here */}
+        <div className="team-card" key={team.id}> {/* Move key here */}
             <div className="team-card-cont">
-                <div className="team-card-info">{team.team_name}</div>
+                <div className="team-card-info">{team.data}</div>
                 <div className="team-card-rank">{team.rank}</div>
                 <Line />
-                {team.tasks.map((task) => (
+                {/*team.tasks.map((task) => (
                     <TaskItem key={task.task_id} task={task} />
-                ))}
+                ))*/}
             </div>
         </div>
     );

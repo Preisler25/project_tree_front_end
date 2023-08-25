@@ -32,7 +32,7 @@ const DailyPointPage = () => {
     //defining the url for the fetch
 
     //this is the url for the fetch
-    const url = `http://localhost:3000/?day=${day}&view=${view}&data=${data}`;
+    const url = `http://localhost:8080/getTeams?day=${day}&view=${view}&data=${data}`;
 
 
     //returning the page
