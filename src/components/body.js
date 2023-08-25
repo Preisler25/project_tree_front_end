@@ -7,14 +7,21 @@ const Body = (params) => {
 
     useEffect(() => {
 
-        fetch(params.url)
+        try {
+            fetch(params.url)
             .then((res) => res.json())
+            .catch((error) => console.log(error) )
             .then((data) => {
                 data = data.map((team) => {
                     return new Team(team.id, team.data, team.tasks_for_day, team.rank);
                 });
                 setTeams(data);
-            });
+            })
+            .catch((error) => console.log(error) );
+        } catch (error) {
+            console.log(error);
+        }
+        
     }, [params.url]);
  
     return (
