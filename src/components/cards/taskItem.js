@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const TaskItem = (params) => {
 
     const task = params.task;
@@ -11,7 +13,7 @@ const TaskItem = (params) => {
     const name = task.name;
     const is_done = task.is_done;
     const max_points = task.max_points;
-    const points = task.points;
+    const [points, setPoints] = useState(task.points);
 
     const classNameConverter = (val) => {
         return val ? 'task-done' : 'task-is-in-progress';
@@ -29,6 +31,7 @@ const TaskItem = (params) => {
                 "max_points": max_points,
                 "points": 0
             }));
+            setPoints(0);
         };
         if (max_points >= new_points) {
             console.log("sending message:" + new_points);
@@ -41,6 +44,7 @@ const TaskItem = (params) => {
                 "max_points": max_points,
                 "points": new_points
             }));
+            setPoints(new_points);
         };
     };
     console.log(points);
