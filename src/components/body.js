@@ -29,8 +29,8 @@ const Body = (params) => {
             <div>{/* body content */}</div>
             <div>{/* tasks */}</div>
             <div className='team-cont'>
-                {teams.map((team) => (
-                    <TeamCard key={team.id} team={team} socket={params.socket}/>
+                {teams.map((team, index) => (
+                    <TeamCard key={index} team={team} socket={params.socket}/>
                 ))}
             </div>
         </div>
