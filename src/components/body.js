@@ -30,7 +30,7 @@ const Body = (params) => {
             <div>{/* tasks */}</div>
             <div className='team-cont'>
                 {teams.map((team) => (
-                    <TeamCard key={team.id} team={team} />
+                    <TeamCard key={team.id} team={team} socket={params.socket}/>
                 ))}
             </div>
         </div>

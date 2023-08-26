@@ -1,30 +1,34 @@
-const TaskItem = ({ task, teamHandler }) => {
+const TaskItem = (params) => {
 
+    const task = params.task;
+    const socket = params.socket;
+
+    const id = task.id;
+    const day_id = task.day_id;
+    const team_id = task.team_id;
     const name = task.name;
     const is_done = task.is_done;
     const max_points = task.max_points;
-    const task_id = task.task_id;
     const points = task.points;
-    const setPoints = teamHandler;
 
     const classNameConverter = (val) => {
         return val ? 'task-done' : 'task-is-in-progress';
     };
 
     const handleChange = (event) => {
-        console.log(event.target.value);
         let new_points = parseInt(event.target.value);
         if (event.target.value === '') {
-            setPoints(0);
+            //websocket sending back shit
         };
         if (max_points >= new_points) {
-            setPoints(new_points);
             //TODO: send new_points to backend
         };
     };
 
+    console.log(task);
+
     return (
-        <div key={task_id} className="task">
+        <div key={id} className="task">
             <div className="task_name">
                 <h3 className={classNameConverter(is_done)} >{name}</h3>
             </div>
