@@ -5,8 +5,6 @@ const TaskItem = (params) => {
     const task = params.task;
     const socket = params.socket;
 
-    console.log(task);
-
     const id = task.id;
     const day_id = task.day_id;
     const team_id = task.team_id;
@@ -22,7 +20,7 @@ const TaskItem = (params) => {
     const handleChange = (event) => {
         let new_points = parseInt(event.target.value);
         if (event.target.value === '') {
-            socket.send('/app/points', {}, JSON.stringify({
+            socket.send('/app/click', {}, JSON.stringify({
                 "id": id,
                 "day_id": day_id,
                 "team_id": team_id,
@@ -34,8 +32,7 @@ const TaskItem = (params) => {
             setPoints(0);
         };
         if (max_points >= new_points) {
-            console.log("sending message:" + new_points);
-            socket.send('/app/points', {}, JSON.stringify({
+            socket.send('/app/click', {}, JSON.stringify({
                 "id": id,
                 "day_id": day_id,
                 "team_id": team_id,
@@ -47,7 +44,6 @@ const TaskItem = (params) => {
             setPoints(new_points);
         };
     };
-    console.log(points);
 
     return (
         <div key={id} className="task">

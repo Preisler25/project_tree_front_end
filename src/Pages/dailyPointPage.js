@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import SockJS from "sockjs-client";
 import Stomp from 'stompjs';
-
 import Body from "../components/body";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
@@ -34,48 +33,40 @@ const DailyPointPage = () => {
     //this is the url for the fetch
     const url = `http://localhost:8080/getTeams?day=${day}&view=${view}&data=${data}`;
     // SockJS kapcsolat és Stomp kliens állapotának tárolása
-    const [socket, setSocket] = useState(null);
+
+
     const [stompClient, setStompClient] = useState(null);
 
     useEffect(() => {
-        const new_socket = new SockJS("http://localhost:8080/stomp-endpoint");
-        const stompClient = Stomp.over(new_socket);
+        const socket = new SockJS("http://localhost:8080/stomp-endpoint");
+        const client = Stomp.over(socket);
 
-        new_socket.onopen = () => {
-            console.log(new_socket);
-            console.log("WebSocket connected");
-            // Feliratkozás a témára
-            stompClient.connect({}, () => {
-                console.log("Stomp client connected");
-                stompClient.subscribe("/ws/point", (message) => {
-                    const receivedMessage = JSON.parse(message.body);
-                    console.log("Received message:", receivedMessage);
-                    // Itt tudsz valamit tenni a kapott üzenettel
+        socket.onopen = () => {
+            client.connect({}, () => {
+                console.log("Connected to WebSocket");
+                client.subscribe('/ws/trieng', function (mess) {
+                    let obj = JSON.parse(mess.body)
+                    console.log(obj)
                 });
             });
         };
 
-        new_socket.onclose = () => {
+        socket.onclose = () => {
             console.log("WebSocket disconnected");
-            // Stomp kliens lecsatlakoztatása
-            if (stompClient.connected) {
-                stompClient.disconnect();
+            if (client.connected) {
+                client.disconnect();
             }
         };
 
-        // Itt állítsd be a socket és stompClient állapotokat
-        setSocket(new_socket);
-        setStompClient(stompClient);
+        setStompClient(client);
 
         return () => {
-            // Stomp kliens lecsatlakoztatása és WebSocket lezárása
-            if (stompClient.connected) {
-                stompClient.disconnect();
+            if (client.connected) {
+                client.disconnect();
             }
-            new_socket.close();
+            socket.close();
         };
     }, []);
-
     //returning the page
     return (
         <div className="main-cont">
