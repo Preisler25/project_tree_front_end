@@ -16,7 +16,7 @@ const router = createBrowserRouter(
       children: [
         {
           path: '',
-          element: <div>LoginPage</div>,
+          element: <DailyPointPage />,
         },
         {
           //login required
