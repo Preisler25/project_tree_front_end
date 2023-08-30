@@ -6,6 +6,7 @@ import './App.css';
 
 //Components import
 import DailyPointPage from './Pages/dailyPointPage';
+import LoginPage from './Pages/loginPage';
 
 
 const router = createBrowserRouter(
@@ -16,7 +17,7 @@ const router = createBrowserRouter(
       children: [
         {
           path: '',
-          element: <DailyPointPage />,
+          element: <LoginPage />,
         },
         {
           //login required
