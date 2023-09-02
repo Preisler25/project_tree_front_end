@@ -5,7 +5,8 @@ import { createBrowserRouter } from 'react-router-dom';
 import './App.css';
 
 //Components import
-import DailyPointPage from './pages/dailyPointPage';
+import DailyPointPage from './Pages/dailyPointPage';
+import LoginPage from './Pages/loginPage';
 
 
 const router = createBrowserRouter(
@@ -16,7 +17,7 @@ const router = createBrowserRouter(
       children: [
         {
           path: '',
-          element: <div>LoginPage</div>,
+          element: <LoginPage />,
         },
         {
           //login required
