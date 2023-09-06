@@ -4,9 +4,10 @@ const LoginPage = () => {
     let [ponts, setPonts] = useState(0)
 
     return (
-        <div>
+        <div className='main-cont'>
             <h1>login</h1>
-            {ponts}
+            <h2> ponts: {ponts}</h2>
+            <button onClick={() => setPonts(ponts +1)}>+</button>
         </div>
     )
 }
