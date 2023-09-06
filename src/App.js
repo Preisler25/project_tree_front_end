@@ -5,6 +5,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import './App.css';
 
 //Components import
+import SignUpPage from './Pages/signUpPage';
 import DailyPointPage from './Pages/dailyPointPage';
 import LoginPage from './Pages/loginPage';
 
