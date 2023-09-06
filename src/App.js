@@ -9,25 +9,27 @@ import DailyPointPage from './Pages/dailyPointPage';
 import LoginPage from './Pages/loginPage';
 
 
-const router = createBrowserRouter(
-  [
-    {
-      path: '/',
-      errorElement: <div>404</div>,
-      children: [
-        {
-          path: 'login',
-          element: <LoginPage />,
-        },
-        {
-          //login required
-          path: 'home',
-          element: <DailyPointPage />,
-        },
-      ]
-    }
-  ]
-);
+const router = createBrowserRouter([
+  {
+    path: "/",
+    errorElement: <div>404</div>,
+    children: [
+      {
+        path: "",
+        element: <LoginPage />,
+      },
+      {
+        path: "sign-up",
+        element: <SignUpPage />,
+      },
+      {
+        //login required
+        path: "home",
+        element: <DailyPointPage />,
+      },
+    ],
+  },
+]);
 
 function App() {
   return (
