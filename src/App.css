@@ -206,3 +206,102 @@ input[type="text"] {
   justify-content: center;
   align-items: center;
 }
+
+
+
+
+.join-button {
+  margin-top: 0.2em;
+  margin-bottom: 1em;
+  font-size: 40px;
+  background-color: rgb(2, 2, 104);
+  padding-left: 30px;
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-cont {
+  margin: auto;
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  background-color: rgba(189, 184, 184, 0.253);
+  border-radius: 30px;
+}
+.login-title {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  background-color: rgba(189, 184, 184, 0.253);
+}
+.log-dec-at {
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  font-size: 45px;
+}
+.login-bg {
+  background-image: url(https://images.newscientist.com/wp-content/uploads/2023/07/25095907/SEI_165307949.jpg?width=1200);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+}
+.login-text {
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-bottom: 0em;
+  font-size: 30px;
+}
+
+/*signup*/
+
+.sign-input {
+  display: inline;
+  font-weight: bold;
+  font-size: 3.5vh;
+  outline: none;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #c6cbd4;
+  border-color: rgb(2, 2, 104);
+  border-width: 1px;
+  padding: 0.2em;
+  height: 1em;
+  margin: 0.3em;
+}
+.sign-input.name {
+  width: 8em;
+}
+.sign-input.class {
+  width: 3.3em;
+}
+.name-class-cont span{
+font-size: 1.5em;
+font-weight: bold;
+}
+.sign-cont {
+  margin: auto;
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+  background-color: rgba(189, 184, 184, 0.253);
+  border-radius: 30px;
+}
+.inl{
+  display: inline;
+}
+.right{
+  text-align: right;
+}
+.but-con{
+  text-align: center;
+}
