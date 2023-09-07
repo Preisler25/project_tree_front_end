@@ -71,7 +71,7 @@ const DailyPointPage = () => {
     return (
         <div className="main-cont">
             <Navbar day={day} setDay={setDay} all_days={all_days} view={view} setView={setView} all_views={all_views} data={data} setData={setData} all_data={all_data} />
-            <Body url={url} />
+            <Body url={url} stompClient={stompClient} />
             <Footer />
         </div>
     );
