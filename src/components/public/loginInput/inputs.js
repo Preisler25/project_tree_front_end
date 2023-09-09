@@ -1,19 +1,37 @@
 import React, { useState } from "react";
 
 const LoginInput = (params) => {
+    const team = params.team;
     return (
         <div key={params.key} className="name-class-cont">
-            <div>
-                key: {params.some_key}
-                team: {params.team}
-            </div>
-                {/*<LoginNameInput key={team} team={team} />
-                <LoginClassInput key={team} team={team} />*/}
-            </div>
+                <LoginNameInput key={team} team={team} />
+                <LoginClassInput key={team} team={team} />
+        </div>
     );
 }
 
+const TeamNameInput = () => {
+    const [team_name, setTeamName] = useState('');
 
+    const handleChange = (event) => {
+        setTeamName(event.target.value);
+    }
+
+    return (
+        <>
+        <label className="sign-label" htmlFor="TeamName"> Csapat Név: </label>
+            <input
+                className="sign-input name"
+                type="text"
+                placeholder="Csapat Név"
+                name="TeamName"
+                onChange={handleChange}
+                value={team_name}
+                id="TeamName"></input>
+        </>
+    );  
+}
+    
 
 const LoginNameInput = (team) => {
     const [user_name, setUserName] = useState('');
@@ -64,4 +82,4 @@ const LoginClassInput = (team) => {
             
 
 
-export default LoginInput;
+export {TeamNameInput, LoginInput};

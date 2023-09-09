@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import LoginInput from "../components/public/loginInput/inputs";
+import {TeamNameInput, LoginInput} from "../components/public/loginInput/inputs";
 
 const SignUpPage = () => {
 
@@ -9,15 +9,10 @@ const SignUpPage = () => {
     <div className="login-bg">
       <h1 className="login-title">Jelentkezés</h1>
       <div className="sign-cont">
-        <form method="POST" action="/sign-up">
+        {/*login form*/}
+        <form method="GET" action="/sign-up">
           <div className="right">
-            <h1 className="log-dec-at inl">Csapat Név:</h1>
-            <input
-              className="sign-input name"
-              type="text"
-              placeholder="Csapat Név"
-              name="TeamName"
-            ></input>
+            <TeamNameInput />
             {max_members.map((team, index) => (
               <LoginInput key={index} some_key={index} team={team} />
             ))}

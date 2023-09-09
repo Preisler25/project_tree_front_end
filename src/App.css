@@ -6,6 +6,11 @@
   color: #FFFCF2;
 }
 
+/*removing scroll bar*/
+::-webkit-scrollbar {
+  display: none;
+}
+
 
 .main-cont {
   background-color: #403D39;
